@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL IN ONE - Your Complete Shopping & Entertainment Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 class="logo"><i class="fas fa-shopping-bag"></i> ALL IN ONE</h1>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="nav" id="main-nav">
+                <button class="nav-btn active" onclick="showSection('home')">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button class="nav-btn" onclick="showSection('shopping')">
+                    <i class="fas fa-shopping-cart"></i> Shopping
+                </button>
+                <button class="nav-btn" onclick="showSection('entertainment')">
+                    <i class="fas fa-video"></i> Entertainment
+                </button>
+                <button class="nav-btn" onclick="showSection('games')">
+                    <i class="fas fa-gamepad"></i> Games
+                </button>
+                <button class="nav-btn" onclick="showSection('news')">
+                    <i class="fas fa-newspaper"></i> News
+                </button>
+                <button class="nav-btn" onclick="showSection('rasi')">
+                    <i class="fas fa-star"></i> Tamil Astrology
+                </button>
+                <button class="nav-btn" onclick="showSection('foods')">
+                    <i class="fas fa-utensils"></i> Foods
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container main-container">
+        <!-- Home Section -->
+        <section id="home-section" class="section active">
+            <div class="home-hero">
+                <h2>Welcome to ALL IN ONE</h2>
+                <p>Your complete shopping & entertainment hub</p>
+            </div>
+            <div class="quick-links">
+                <div class="quick-link-card" onclick="showSection('shopping')">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Shopping</h3>
+                    <p>Browse our extensive product collection</p>
+                </div>
+                <div class="quick-link-card" onclick="showSection('entertainment')">
+                    <i class="fas fa-video"></i>
+                    <h3>Entertainment</h3>
+                    <p>Watch videos and enjoy content</p>
+                </div>
+                <div class="quick-link-card" onclick="showSection('games')">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Games</h3>
+                    <p>Play online games</p>
+                </div>
+                <div class="quick-link-card" onclick="showSection('news')">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>News</h3>
+                    <p>Stay updated with latest news</p>
+                </div>
+                <div class="quick-link-card" onclick="showSection('rasi')">
+                    <i class="fas fa-star"></i>
+                    <h3>Tamil Astrology </h3>
+                    <p>Check your daily horoscope</p>
+                </div>
+                <div class="quick-link-card" onclick="showSection('foods')">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Foods</h3>
+                    <p>Order delicious food</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Section -->
+        <section id="shopping-section" class="section">
+            <div class="shopping-header">
+                <h2>Shopping</h2>
+                <div class="shopping-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search products..." onkeyup="handleSearch()">
+                    </div>
+                    <button class="btn-filter-toggle" onclick="toggleFilterPanel()">
+                        <i class="fas fa-filter"></i> Filters
+                    </button>
+                </div>
+            </div>
+
+            <div class="shopping-content">
+                <!-- Filter Sidebar -->
+                <aside id="filter-panel" class="filter-panel">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="btn-close" onclick="toggleFilterPanel()">×</button>
+                    </div>
+                    <div class="filter-content">
+                        <div class="filter-group">
+                            <h4>Category</h4>
+                            <div class="category-list" id="category-list">
+                                <!-- Categories will be populated by JS -->
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-range">
+                                <input type="range" id="price-range" min="0" max="100000" value="100000" oninput="updatePriceDisplay()">
+                                <div class="price-display">
+                                    <span>₹0</span>
+                                    <span id="max-price">₹100,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Rating</h4>
+                            <div class="rating-filters">
+                                <label><input type="checkbox" value="4" onchange="applyFilters()"> 4+ Stars</label>
+                                <label><input type="checkbox" value="3" onchange="applyFilters()"> 3+ Stars</label>
+                                <label><input type="checkbox" value="2" onchange="applyFilters()"> 2+ Stars</label>
+                            </div>
+                        </div>
+                        <button class="btn-clear-filters" onclick="clearFilters()">Clear All Filters</button>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-container">
+                    <div class="category-breadcrumb" id="category-breadcrumb">
+                        <span onclick="showAllCategories()">All Categories</span>
+                    </div>
+                    <div id="products-grid" class="products-grid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entertainment Section -->
+        <section id="entertainment-section" class="section">
+            <h2>Entertainment</h2>
+            <div class="entertainment-content">
+                <div class="video-section">
+                    <h3>Popular Videos</h3>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                            <h4>Popular Music Video</h4>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" frameborder="0" allowfullscreen></iframe>
+                            <h4>Entertainment Content</h4>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe>
+                            <h4>Fun Videos</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-links">
+                    <h3>Video Platforms</h3>
+                    <div class="platform-links">
+                        <a href="https://www.youtube.com" target="_blank" class="platform-link">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                        <a href="https://www.hotstar.com" target="_blank" class="platform-link">
+                            <i class="fas fa-tv"></i> Disney+ Hotstar
+                        </a>
+                        <a href="https://www.netflix.com" target="_blank" class="platform-link">
+                            <i class="fas fa-film"></i> Netflix
+                        </a>
+                        <a href="https://www.primevideo.com" target="_blank" class="platform-link">
+                            <i class="fab fa-amazon"></i> Amazon Prime
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games-section" class="section">
+            <h2>Games</h2>
+            <div class="games-content">
+                <div class="games-grid">
+                    <div class="game-card">
+                        <h3>Snake Game</h3>
+                        <p>Classic snake game</p>
+                        <button class="btn-play" onclick="openGame('snake')">Play Now</button>
+                    </div>
+                    <div class="game-card">
+                        <h3>Tic Tac Toe</h3>
+                        <p>Play against AI</p>
+                        <button class="btn-play" onclick="openGame('tictactoe')">Play Now</button>
+                    </div>
+                    <div class="game-card">
+                        <h3>Memory Game</h3>
+                        <p>Test your memory</p>
+                        <button class="btn-play" onclick="openGame('memory')">Play Now</button>
+                    </div>
+                    <div class="game-card">
+                        <h3>More Games</h3>
+                        <p>Explore online games</p>
+                        <a href="https://www.crazygames.com" target="_blank" class="btn-play">Browse Games</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news-section" class="section">
+            <h2>News</h2>
+            <div class="news-content">
+                <div class="news-feed">
+                    <h3>Latest News</h3>
+                    <div class="news-articles" id="news-articles">
+                        <div class="news-card">
+                            <h4>Technology Advances in 2026</h4>
+                            <p>Latest developments in technology and innovation...</p>
+                            <span class="news-date">Today</span>
+                        </div>
+                        <div class="news-card">
+                            <h4>Economic Growth Trends</h4>
+                            <p>Analysis of current economic indicators...</p>
+                            <span class="news-date">Today</span>
+                        </div>
+                        <div class="news-card">
+                            <h4>Health and Wellness Tips</h4>
+                            <p>Important health updates and wellness advice...</p>
+                            <span class="news-date">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-channels">
+                    <h3>News Channels</h3>
+                    <div class="channel-links">
+                        <a href="https://www.ndtv.com" target="_blank" class="channel-link">
+                            <i class="fas fa-tv"></i> NDTV
+                        </a>
+                        <a href="https://timesofindia.indiatimes.com" target="_blank" class="channel-link">
+                            <i class="fas fa-newspaper"></i> Times of India
+                        </a>
+                        <a href="https://www.thehindu.com" target="_blank" class="channel-link">
+                            <i class="fas fa-newspaper"></i> The Hindu
+                        </a>
+                        <a href="https://www.bbc.com/news" target="_blank" class="channel-link">
+                            <i class="fas fa-globe"></i> BBC News
+                        </a>
+                        <a href="https://www.cnn.com" target="_blank" class="channel-link">
+                            <i class="fas fa-satellite"></i> CNN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rasi Palangal Section -->
+        <section id="rasi-section" class="section">
+            <h2>Rasi Palangal (Tamil Astrology)</h2>
+            <div class="rasi-content">
+                <div class="rasi-selector">
+                    <h3>Select Your Zodiac</h3>
+                    <select id="rasi-select" onchange="showRasiDetails()">
+                        <option value="">Choose your zodiac (Raasi)</option>
+                        <option value="mesham">மேஷம் (Aries)</option>
+                        <option value="rishabam">ரிஷபம் (Taurus)</option>
+                        <option value="mithunam">மிதுனம் (Gemini)</option>
+                        <option value="kadagam">கடகம் (Cancer)</option>
+                        <option value="simham">சிம்மம் (Leo)</option>
+                        <option value="kanni">கன்னி (Virgo)</option>
+                        <option value="thulam">துலாம் (Libra)</option>
+                        <option value="viruchigam">விருச்சிகம் (Scorpio)</option>
+                        <option value="thanusu">தனுசு (Sagittarius)</option>
+                        <option value="makaram">மகரம் (Capricorn)</option>
+                        <option value="kumbam">கும்பம் (Aquarius)</option>
+                        <option value="meenam">மீனம் (Pisces)</option>
+                    </select>
+                </div>
+                <div id="rasi-details" class="rasi-details">
+                    <p>Please select your Rasi to view today's horoscope</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foods Section -->
+        <section id="foods-section" class="section">
+            <h2>Foods</h2>
+            <div class="foods-content">
+                <div class="food-categories">
+                    <button class="food-cat-btn active" onclick="filterFoods('all')">All</button>
+                    <button class="food-cat-btn" onclick="filterFoods('veg')">Vegetarian</button>
+                    <button class="food-cat-btn" onclick="filterFoods('nonveg')">Non-Vegetarian</button>
+                    <button class="food-cat-btn" onclick="filterFoods('dessert')">Desserts</button>
+                    <button class="food-cat-btn" onclick="filterFoods('beverage')">Beverages</button>
+                </div>
+                <div id="foods-grid" class="foods-grid">
+                    <!-- Food items will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+            <button class="btn-close" onclick="toggleCart()">×</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (5%):</span>
+                    <span id="cart-tax">₹0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="cart-total">₹0.00</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-clear-cart" onclick="clearCart()">Clear Cart</button>
+                <button class="btn-checkout" onclick="openPaymentModal()" id="checkout-btn" disabled>Proceed to Checkout</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Cart Toggle Button -->
+    <button id="cart-toggle" class="cart-toggle" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </button>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Payment</h2>
+                <button class="btn-close" onclick="closePaymentModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="payment-summary">
+                    <h3>Order Summary</h3>
+                    <div id="payment-items"></div>
+                    <div class="payment-total">
+                        <strong>Total: <span id="payment-total-amount">₹0.00</span></strong>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card" checked>
+                            <i class="fas fa-credit-card"></i> Credit/Debit Card
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="upi">
+                            <i class="fas fa-mobile-alt"></i> UPI
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cod">
+                            <i class="fas fa-money-bill"></i> Cash on Delivery
+                        </label>
+                    </div>
+                </div>
+                <div class="payment-form">
+                    <input type="text" id="card-number" placeholder="Card Number" style="display: none;">
+                    <input type="text" id="card-name" placeholder="Card Holder Name" style="display: none;">
+                    <input type="text" id="upi-id" placeholder="UPI ID" style="display: none;">
+                </div>
+                <button class="btn-pay-now" onclick="completePayment()">Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content product-modal-content">
+            <div class="modal-header">
+                <h2 id="product-modal-title">Product Details</h2>
+                <button class="btn-close" onclick="closeProductModal()">×</button>
+            </div>
+            <div class="modal-body" id="product-modal-body">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                <img src="images/play-store.png">
+                <img src="images/app-store.png">
+            </div>
+        </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-link">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://x.com" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showSection('shopping')">Shopping</a></li>
+                        <li><a href="#" onclick="showSection('entertainment')">Entertainment</a></li>
+                        <li><a href="#" onclick="showSection('games')">Games</a></li>
+                        <li><a href="#" onclick="showSection('news')">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@allinone.com</p>
+                    <p>Phone: +91 1234567890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ALL IN ONE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
