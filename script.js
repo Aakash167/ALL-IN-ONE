@@ -7,20 +7,20 @@ const products = {
         { id: 4, name: "Luxury Gold Watch", brand: "Prestige", price: 19999, rating: 4.8, image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500", description: "Premium luxury watch with gold finish" }
     ],
     dressesMen: [
-        { id: 101, name: "Formal Shirt", brand: "StyleMen", price: 1299, rating: 4.3, image: "https://thehouseofrare.com/products/neutonss-mens-shirt-brown?srsltid=AfmBOoq8bS8R7fAsx9WgE1wLGZtWlPRO2cPBSyy0OT5QC2khs0fRN9T2", description: "Premium cotton formal shirt" },
+        { id: 101, name: "Formal Shirt", brand: "StyleMen", price: 1299, rating: 4.3, image: "https://images.unsplash.com/photo-1714328564923-d4826427c991?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Premium cotton formal shirt" },
         { id: 102, name: "Casual T-Shirt", brand: "ComfortWear", price: 599, rating: 4.1, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500", description: "Comfortable cotton t-shirt" },
         { id: 103, name: "Denim Jeans", brand: "BlueDenim", price: 1999, rating: 4.5, image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500", description: "Classic fit denim jeans" },
-        { id: 104, name: "Suit Set", brand: "Elegance", price: 8999, rating: 4.7, image: "https://images.unsplash.com/photo-1594938298606-0b8c91b0b0e5?w=500", description: "Premium formal suit set" }
+        { id: 104, name: "Suit Set", brand: "Elegance", price: 8999, rating: 4.7, image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Premium formal suit set" }
     ],
     dressesWomen: [
         { id: 201, name: "Elegant Dress", brand: "Fashionista", price: 2499, rating: 4.6, image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500", description: "Beautiful elegant dress for parties" },
         { id: 202, name: "Casual Top", brand: "ChicStyle", price: 899, rating: 4.2, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500", description: "Stylish casual top" },
         { id: 203, name: "Summer Dress", brand: "Breezy", price: 1599, rating: 4.4, image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500", description: "Light and comfortable summer dress" },
-        { id: 204, name: "Designer Saree", brand: "Traditional", price: 4999, rating: 4.8, image: "https://images.unsplash.com/photo-1583496661160-fb5886a013ba?w=500", description: "Traditional designer saree" }
+        { id: 204, name: "Designer Saree", brand: "Traditional", price: 4999, rating: 4.8, image: "https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Traditional designer saree" }
     ],
     kids: [
         { id: 301, name: "Kids T-Shirt", brand: "LittleStars", price: 399, rating: 4.3, image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500", description: "Colorful kids t-shirt" },
-        { id: 302, name: "Kids Jeans", brand: "PlayWear", price: 799, rating: 4.1, image: "https://images.unsplash.com/photo-1506629905607-0c2a27b3c0c2?w=500", description: "Durable kids jeans" },
+        { id: 302, name: "Kids Jeans", brand: "PlayWear", price: 799, rating: 4.1, image: "https://plus.unsplash.com/premium_photo-1674828601362-afb73c907ebe?q=80&w=453&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Durable kids jeans" },
         { id: 303, name: "Kids Dress", brand: "Princess", price: 1299, rating: 4.5, image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500", description: "Beautiful kids dress" },
         { id: 304, name: "Kids Shoes", brand: "ComfortKids", price: 999, rating: 4.2, image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500", description: "Comfortable kids shoes" }
     ],
@@ -45,8 +45,8 @@ const products = {
     accessories: [
         { id: 701, name: "Wireless Earbuds", brand: "SoundMax", price: 2999, rating: 4.5, image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=500", description: "Premium wireless earbuds" },
         { id: 702, name: "Phone Case", brand: "ProtectPro", price: 499, rating: 4.1, image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500", description: "Durable phone case" },
-        { id: 703, name: "Power Bank", brand: "ChargeFast", price: 1499, rating: 4.3, image: "https://images.unsplash.com/photo-1609091834311-3e3e1c9e8f0b?w=500", description: "High capacity power bank" },
-        { id: 704, name: "Smart Band", brand: "FitTrack", price: 1999, rating: 4.4, image: "https://images.unsplash.com/photo-1544966503-7cc49e83b3c4?w=500", description: "Fitness tracking smart band" }
+        { id: 703, name: "Power Bank", brand: "ChargeFast", price: 1499, rating: 4.3, image: "https://images.unsplash.com/photo-1644571669401-9ab344866592?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "High capacity power bank" },
+        { id: 704, name: "Smart Band", brand: "FitTrack", price: 1999, rating: 4.4, image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Fitness tracking smart band" }
     ],
     groceries: [
         { id: 801, name: "Organic Rice", brand: "FarmFresh", price: 199, rating: 4.5, image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500", description: "Premium organic rice" },
@@ -62,9 +62,9 @@ const products = {
     ],
     bikes: [
         { id: 1001, name: "Mountain Bike", brand: "TrailBlazer", price: 24999, rating: 4.6, image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=500", description: "Durable mountain bike" },
-        { id: 1002, name: "Road Bike", brand: "SpeedRider", price: 29999, rating: 4.7, image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500", description: "Fast road bike" },
+        { id: 1002, name: "Road Bike", brand: "SpeedRider", price: 29999, rating: 4.7, image: "https://images.unsplash.com/photo-1600492110568-f9bf4835500a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Fast road bike" },
         { id: 1003, name: "City Bike", brand: "UrbanRide", price: 19999, rating: 4.4, image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=500", description: "Comfortable city bike" },
-        { id: 1004, name: "Electric Bike", brand: "EcoRide", price: 49999, rating: 4.8, image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500", description: "Eco-friendly electric bike" }
+        { id: 1004, name: "Electric Bike", brand: "EcoRide", price: 49999, rating: 4.8, image: "https://plus.unsplash.com/premium_photo-1745571156840-624559673a7f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Eco-friendly electric bike" }
     ],
     cars: [
         { id: 1101, name: "Sedan Car", brand: "AutoMax", price: 899999, rating: 4.7, image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500", description: "Comfortable family sedan" },
@@ -79,10 +79,10 @@ const products = {
         { id: 1204, name: "Bluetooth Speaker", brand: "SoundWave", price: 2999, rating: 4.4, image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500", description: "Portable Bluetooth speaker" }
     ],
     appliances: [
-        { id: 1301, name: "Washing Machine", brand: "CleanPro", price: 24999, rating: 4.6, image: "https://images.unsplash.com/photo-1626806787461-7c8c85f5b5c5?w=500", description: "Fully automatic washing machine" },
-        { id: 1302, name: "Refrigerator", brand: "CoolMax", price: 34999, rating: 4.7, image: "https://images.unsplash.com/photo-1571175443880-49e1d7551efc?w=500", description: "Energy efficient refrigerator" },
+        { id: 1301, name: "Washing Machine", brand: "CleanPro", price: 24999, rating: 4.6, image: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Fully automatic washing machine" },
+        { id: 1302, name: "Refrigerator", brand: "CoolMax", price: 34999, rating: 4.7, image: "https://images.unsplash.com/photo-1649518755041-651c29b56309?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Energy efficient refrigerator" },
         { id: 1303, name: "Microwave Oven", brand: "HeatFast", price: 8999, rating: 4.5, image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=500", description: "Convection microwave oven" },
-        { id: 1304, name: "Air Conditioner", brand: "CoolAir", price: 39999, rating: 4.6, image: "https://images.unsplash.com/photo-1631543915443-1832e5378c93?w=500", description: "Inverter AC" }
+        { id: 1304, name: "Air Conditioner", brand: "CoolAir", price: 39999, rating: 4.6, image: "https://plus.unsplash.com/premium_photo-1679943423706-570c6462f9a4?q=80&w=405&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Inverter AC" }
     ],
     notebooks: [
         { id: 1401, name: "Spiral Notebook", brand: "WriteWell", price: 199, rating: 4.2, image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500", description: "200 pages spiral notebook" },
@@ -107,11 +107,11 @@ const products = {
 // Food Items
 const foodItems = [
     { id: 1701, name: "Margherita Pizza", category: "veg", price: 299, image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500", description: "Classic margherita pizza" },
-    { id: 1702, name: "Chicken Biryani", category: "nonveg", price: 349, image: "https://images.unsplash.com/photo-1563379091339-03246963d29b?w=500", description: "Spicy chicken biryani" },
+    { id: 1702, name: "Chicken Biryani", category: "nonveg", price: 349, image: "https://plus.unsplash.com/premium_photo-1694141251673-1758913ade48?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Spicy chicken biryani" },
     { id: 1703, name: "Chocolate Cake", category: "dessert", price: 199, image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500", description: "Rich chocolate cake" },
     { id: 1704, name: "Fresh Orange Juice", category: "beverage", price: 99, image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500", description: "Fresh orange juice" },
     { id: 1705, name: "Veg Thali", category: "veg", price: 249, image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500", description: "Complete vegetarian thali" },
-    { id: 1706, name: "Butter Chicken", category: "nonveg", price: 399, image: "https://images.unsplash.com/photo-1563379091339-03246963d29b?w=500", description: "Creamy butter chicken" },
+    { id: 1706, name: "Butter Chicken", category: "nonveg", price: 399, image: "https://plus.unsplash.com/premium_photo-1661419883163-bb4df1c10109?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Creamy butter chicken" },
     { id: 1707, name: "Ice Cream Sundae", category: "dessert", price: 149, image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500", description: "Delicious ice cream sundae" },
     { id: 1708, name: "Coffee", category: "beverage", price: 79, image: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=500", description: "Hot coffee" }
 ];
