@@ -7,7 +7,7 @@ const products = {
         { id: 4, name: "Luxury Gold Watch", brand: "Prestige", price: 19999, rating: 4.8, image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500", description: "Premium luxury watch with gold finish" }
     ],
     dressesMen: [
-        { id: 101, name: "Formal Shirt", brand: "StyleMen", price: 1299, rating: 4.3, image: "https://images.unsplash.com/photo-1594938291221-94f313b0e69a?w=500", description: "Premium cotton formal shirt" },
+        { id: 101, name: "Formal Shirt", brand: "StyleMen", price: 1299, rating: 4.3, image: "https://thehouseofrare.com/products/neutonss-mens-shirt-brown?srsltid=AfmBOoq8bS8R7fAsx9WgE1wLGZtWlPRO2cPBSyy0OT5QC2khs0fRN9T2", description: "Premium cotton formal shirt" },
         { id: 102, name: "Casual T-Shirt", brand: "ComfortWear", price: 599, rating: 4.1, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500", description: "Comfortable cotton t-shirt" },
         { id: 103, name: "Denim Jeans", brand: "BlueDenim", price: 1999, rating: 4.5, image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500", description: "Classic fit denim jeans" },
         { id: 104, name: "Suit Set", brand: "Elegance", price: 8999, rating: 4.7, image: "https://images.unsplash.com/photo-1594938298606-0b8c91b0b0e5?w=500", description: "Premium formal suit set" }
